@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Work 1</title>
+       <style>
+        *{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 1em;
+            color: white;
+        }
+        body{
+            background-color: black;
+            text-align: center;
+        }
+        #username{
+            width: 25%;
+            color: black;
+            display: block;
+            padding: 10px;
+            border: 2px solid white;
+            outline: none;
+            margin: 0 auto;
+            margin-bottom: 10px;
+            margin-top: 20%;
+        }
+        #password{
+            width: 25%;
+            color: black;
+            display: block;
+            padding: 10px;
+            border: 2px solid white;
+            outline: none;
+            margin: 0 auto;
+            margin-bottom: 10px;
+        }
+
+        input:hover{
+        
+            border-color: orange;
+        }
+
+        #check{
+            accent-color: orange;
+        }
+
+        #login{
+            padding: 8px 16px;
+            border: 1px solid lime;
+            background-color: white;
+            color: lime;
+            outline: 0;
+        }
+        #login:hover{
+            cursor: pointer;
+            background-color: lime;
+            color: white;
+        }
+
+        #reset{
+            margin-top: 10px;
+            padding: 8px 16px;
+            border: 1px solid red;
+            background-color: white;
+            color: red;
+            outline: 0;
+        }
+        #reset:hover{
+            cursor: pointer;
+            background-color: red;
+            color: white;
+        }
+
+     </style>
+    </head>
+<body>
+    
+    <form>
+        <input type="text" id="username" placeholder="Please Enter Username">
+        <input type="password" id="password" placeholder="Please Enter Password">
+        <input type="checkbox" id="check" onchange="showPassword()"> Show Passsword
+        <br/>
+        <button type="submit" id="login">Login</button>
+        <button type="reset" id="reset">Reset</button>
+    </form>
+
+    <script>
+        const showPassword = ()=>{
+            const checkBox  = document.getElementById('check');
+            const password = document.getElementById('password');
+
+            if(checkBox.checked){
+                if(password.type === "password")
+            {
+                password.type = "text";
+                
+            }
+            else{
+                password.type = "password";
+            }
+            }
+            else{
+                password.type = "password";
+            }
+        }
+    </script>
+</body>
+</html>
